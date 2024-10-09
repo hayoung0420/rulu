@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Your Tohgue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <style>
+        .zen-kurenaido-regular {
+            font-family: "Zen Kurenaido", sans-serif;
+            font-weight: 400;
+             font-style: normal;
+        }
+
+        body {
+            font-family: "Zen Kurenaido", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* 부드러운 배경색 */
+            color: #333;
+        }
+
+        header {
+            background-color: #b3d9ff; /* 파스텔 블루 배경 */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1{
+            font-size: 60px;
+        }
+
+        header p {
+            font-size: 30px;
+            font-family: "Zen Kurenaido", sans-serif;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            position: relative; /* 포지션 설정 */
+            transition: transform 0.3s, color 0.3s; /* 크기와 색상 전환 */
+        }
+
+        h2:hover {
+            transform: scale(1.1); /* 마우스 오버 시 크기 증가 */
+            color: #ff6f61; /* 색상 변화 */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        nav {
+            background-color: #ffd1dc; /* 파스텔 핑크 네비게이션 */
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+            padding: 10px;
+            display: inline-block;
+            position: relative;
+            transition: transform 0.3s, color 0.3s; /* 링크 크기와 색상 전환 */
+        }
+
+        nav a:hover {
+            transform: scale(1.1); /* 마우스 오버 시 크기 증가 */
+            color: #ff6f61; /* 색상 변화 */
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #ff9999; /* 사각형 색상 */
+            margin-top: 5px;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            opacity: 0; /* 기본적으로 보이지 않도록 설정 */
+            transition: opacity 0.3s; /* 부드러운 전환 효과 */
+        }
+
+        nav a:hover::after {
+            opacity: 1; /* 호버할 때 사각형이 보이도록 설정 */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .centered-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .centered-section h2 {
+            margin-top: 15px;
+        }
+
+        .centered-section p {
+            font-size: 21px;
+        }
+
+        .section-title {
+            color: #5aa0e6;; /* 파스텔 블루 */
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .content {
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #b3d9ff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #b3d9ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #ff9999; /* 버튼 호버 색상 */
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .advantages {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .advantage {
+            flex: 1;
+            margin: 0 10px;
+            padding: 10px;
+            background-color: #ffe6f2; /* 연한 핑크 배경 */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .importance-section {
+            margin-top: 30px;
+        }
+
+        .importance-section h2 {
+            font-size: 24px;
+            color: #5aa0e6;
+            margin-bottom: 3px;
+        }
+
+        .importance-section p {
+            font-size: 20px;
+        }
+
+        .importance-section h3 {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-size: 17px;
+            color: #ff6f61; /* 강조 색상 */
+        }
+
+        .imag {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Move Your Tongue</h1>
+        <p>日本語の英語の発音を改善する唯一のサイトです。</p>
+    </header>
+
+    <nav>
+        <a href="https://smore.im/quiz/Id9d7CZN8I" class="active">Level Test</a>
+        <a href="index.consonant.html">Consonant Pratice</a>
+        <a href="#resources">Quiz</a>
+        <a href="#contact">More imformation</a>
+    </nav>
+
+    <div class="container">
+        <section id="importance" class="centered-section">
+            <h2>Welcome our page!</h2>
+            <p>
+                Welcome all learners to our website to learn !
+               <br> Move Your Tongue、それはのためのたったつの字ウェブです。
+               <br> あなたのの発レベルがかるLevel Testと
+               <br> がにとする［F,Th,N］発に対するしいフィドバックをすることができます。
+               <br> たちと緒にの発をMasterしますか？
+               <br><br><button class="button">scroll down</button>
+            </p>
+        </section>
+
+        <section id="learning">
+            <h2 class="section-title">Goal and Contents</h2>
+            <p class="content">
+                Move Your Tongueは日本人が発音しにくい英語単語の中で［f。th。nJの発音を要求する単語を中心に皆さんを助けるために来ました！過去にはグローバル化が多く進まなかったし日本の内市場だけで経済を運営するにはそんなに難しい状況ではなかったです。しかし、今は全世界が一つの統合されたネットワークを構築し、外国人とのコミュニケーションは誰もが必要とする時代が到来しました。そのため、外国人と意思疎通ができない日本人にだけ慣れた英語はそれほど重要ではありません。
+                Move Your Tongueと共に英語でコミュニケーシヨンできるSpeakerになるために行ってみましょうか？
+            </p>
+            
+
+            <div class="advantages">
+                <div class="advantage">
+                    <h3>Level test</h3>
+                    <p>Move Your Tongueで重要に扱う［、th。n］発音についてどれだけ知って発音するのか、もし間違った発音を今までずっと正しい
+                        と思って間違って発音しているのか、正しい発音を知ってはいますが、特定の理由で正しい発音ができないのかについて判断す
+                        るために、6つの単語の発音についてあなたのLevelをテストする過程を経なければなりません</p>
+                </div>
+                <div class="advantage">
+                    <h3>Consonant Pratice</h3>
+                    <p>Level Testを終えた後、Move Your Tongueが提示するルートに従ってください。同じ単語に対して日本で間違って発音されたり、日本人が間
+                        違って発音している実際の映像とアメリカ人が発音する映像を比較してその違いを示しています。その後、自分の知っている通りに単語
+                        を録音すると、フィードバックを受け取ります。フィードバックを受けた後、同じ部類の他の単語をもう一度IPAに従って発音する練習過
+                        程を経て、さらにその単語が使われた文章を読んでみる時間を持つことになります</p>
+                </div>
+                <div class="advantage">
+                    <h3>Quiz review</h3>
+                    <p>
+                        Move Your Tongueが提示する学習過程についてきて終えたのなら、きちんと学習して自分のものにしたかが重要です。
+                        学習前に受験したLevel Testと、学習過程を終えた後に受験するQuizの点数を比較して、Move Your Tongueを通じてあなたが</p>
+                </div>
+            </div>
+
+            <div class="importance-section">
+                <h2>Importance of pronouncation</h2>
+                <p>It is never necessary to pronounce it the same as a native pronunciation. However, if you do not know the exact pronunciation, communication problems arise. Let's recognize the importance of pronunciation by looking at the example situations below.</p>
+
+                <h3>The situation at work</h3>
+                <p>
+                    Situation: A Japanese employee asks for important documents from the team leader, but they are preparing "pies" with a
+                    <br>leader: Could you prepare all the files for the meeting?
+                    <br>staff: (pronunciation mistake) Oh, sure! I will get all the pies ready.
+                    <br>leader: (embarrassment) What? Pies? No, I said files, not pies!
+
+                    <br>Description: Japanese doesn't have [f] pronunciation, so it can be pronounced [p]. This can cause confusion at work
+                </p>
+
+                <h3>The situation at school</h3>
+                <p>
+                 Situation: A Japanese student asks his teacher "third question," but mispronounces it as "first question."
+                <br>student: Can you help me with the third question?
+                <br>Why do you want to help with that?
+                <br>student: No, no! I mean the third question!
+
+                <br>Description: [th] Pronunciation incorrectly as [s] resulting in a situation where the content of the question cannot be conveyed properly.
+                </p>
+
+                <h3>Daily situation</h3>
+                <p>
+                Situation: A Japanese friend tries to show off "knit," but mispronounces it and is mistaken for "lipstick."
+                <br>A friend: I just got a new knit sweater!
+                <br>B friend: Oh, you think lipstick?
+                <br>A friend: No, I said knit sweater, not lipstick!
+
+                <br>Description: [n] I mispronounce the pronunciation [l], which changes what my friend asked.
+                </p>
+            </div>
+        </section>
+
+        <div class="importance-section">
+            <h2>Why is Japanese and Korean different?</h2>
+            <p>This is something you need to know before you pronounce it!</p>
+
+            <h3>Opened syllables vs Closed syllables </h3>
+            <p>
+                Discontinuation & Lung Syllable? Simply put, an opening syllable is a word that a word can end in a vowel, and a closing syllable ends in a consonant! Korean and English have both opening and closing syllable structures, but Japanese only has an opening syllable structure, so even the original words that end in consonants must be forced to end in vowels, so even the same English word can sound awkward to us!
+                <br><font color="red"><b>&ensp;EX</b></font> Open syllables: 'ga', 'na', 'go', etc. vs. closed syllables: 'home', 'cat', 'top', etc. -> Japanese end up with a consonant or awkwardly pronounce words with consonant support [McDonald's is pronounced as 'MacDonald' by Koreans, and 'macudonardo' because Japanese cannot pronounce consonant support!]!
+
+            </p>
+
+            <h3>Japanese English?</h3>
+            <p>
+                Have you ever heard of Konglish? Konglish is a combination of Korean and English, and it is an English expression that has been transformed into Korean. Likewise, Japanese is a combination of Japanese and English, and when these expressions are used in foreign countries, foreigners often don't understand. Not only do foreigners not know what the word itself is, but Japanese pronunciation of the word itself is difficult to understand.
+                <br><font color="red"><b>&ensp;EX</b></font> 'dress shirt' That's the correct English expression for shirts that we all know. However, what Japan used to call a white shirt because of its white color became common in modern dress shirts. 
+                <br>[The following link is a song with several Japanese reprints: https://youtu.be/ODRNj2SH1Ac?si=WHZE56TyahEd0vfX
+            </p>
+
+            <h3>In Japan, English education and learning are the only grammar?</h3>
+            <p>
+                English education in the Japanese educational field has been mainly based on grammar from the past (1970~80) and teaching methods of improving cognitive ability and improving understanding of language through the process of translating the target language into one's own mother tongue, so there is not a well-established system to educate students on English pronunciation, so students did not have the opportunity to experience proper English pronunciation in the first place!
+            </p>
+        </div>
+    </section>
+
+        <section id="resources">
+            <h2 class="section-title">extra resource</h2>
+            <p class="content">
+                Download materials to improve your English pronunciation. Use pronunciation tables, practice questions, and video lectures to learn your pronunciation 
+                It can be improved systematically.
+            </p>
+            <button class="button">download data</button>
+        </section>
+
+        <section id="contact">
+            
+    <div class="imag">
+        <img src="./excited.png" width="600", height="380">
+    </div>

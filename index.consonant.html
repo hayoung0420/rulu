@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consonant Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <style>
+        .zen-kurenaido-regular {
+            font-family: 'Zen Kurenaido', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            font-family: 'Zen Kurenaido', sans-serif;
+        }
+
+        body {
+            font-family: 'Zen Kurenaido', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* 동일한 배경색 */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* 전체 페이지 높이 */
+        }
+
+        header {
+            background-color: #b3d9ff; /* 파스텔 블루 배경 */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header p {
+            font-size: 30px;
+            margin-top:3px;
+            margin-bottom: 1px;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .hot-air-balloon {
+            position: relative;
+            width: 150px;
+            height: 220px;
+            margin: 20px;
+            transition: transform 0.3s; /* 부드러운 애니메이션 효과 */
+        }
+
+        .hot-air-balloon:hover {
+            transform: scale(1.05); /* 마우스 오버 시 크기 증가 */
+        }
+
+        .balloon-top {
+            background-color: #ffd1dc; /* 파스텔 핑크 */
+            border-radius: 75% 75% 0 0; /* 둥근 윗부분 */
+            height: 100px;
+            text-align: center;
+            font-size: 35px;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* 가운데 정렬 */
+        }
+
+        .balloon-top:hover {
+            background-color: #ff9999; /* 호버 색상 */
+        }
+
+        .basket {
+            width: 60%;
+            height: 80px;
+            background-color: #d4d4d4; /* 바구니 색 */
+            border-radius: 0 0 15px 15px; /* 둥근 바구니 아래 */
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .basket div {
+            cursor: pointer;
+            padding: 5px;
+            transition: background-color 0.3s, transform 0.3s; /* 호버 애니메이션 추가 */
+        }
+
+        .basket div:hover {
+            background-color: #b3d9ff; /* 호버 색상 */
+            transform: scale(1.05); /* 마우스 오버 시 크기 증가 */
+        }
+
+        footer {
+            background-color: #b3d9ff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            margin-top: auto; /* footer를 페이지 아래쪽으로 이동 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Consonant Practice</h1>
+        <p>CHOOSE what you want to learn!</p>
+    </header>
+
+    <div class="container">
+        <div class="hot-air-balloon">
+            <div class="balloon-top" onclick="location.href='./index.fatherfirstpage.html'">
+                [f] 
+            </div>
+            <div class="basket">
+                <div onclick="location.href='./index.wordpronu.html'">word</div>
+                <div onclick="location.href='practice_sentences.html'">sentence</div>
+            </div>
+        </div>
+
+        <div class="hot-air-balloon">
+            <div class="balloon-top" onclick="location.href='practice_th.html'">
+                [th] 
+            </div>
+            <div class="basket">
+                <div onclick="location.href='practice_words.html'">word</div>
+                <div onclick="location.href='practice_sentences.html'">sentence</div>
+            </div>
+        </div>
+
+        <div class="hot-air-balloon">
+            <div class="balloon-top" onclick="location.href='practice_n.html'">
+                [n] 
+            </div>
+            <div class="basket">
+                <div onclick="location.href='practice_words.html'">word</div>
+                <div onclick="location.href='practice_sentences.html'">sentence</div>
+            </div>
+        </div>
+
+        <div class="hot-air-balloon">
+            <div class="balloon-top" onclick="location.href='practice_t.html'">
+                [t] 
+            </div>
+            <div class="basket">
+                <div onclick="location.href='practice_words.html'">word</div>
+                <div class="basket div" onclick="location.href='practice_sentences.html'">sentence</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Move Your Tongue</p>
+    </footer>
+</body>
+</html>

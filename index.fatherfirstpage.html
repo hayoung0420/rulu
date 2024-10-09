@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F (Father) 발음 연습</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #EAF2FF; /* 배경색 */
+            font-family: "Zen Kurenaido", sans-serif; /* 폰트 */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 상하 중앙 배치 */
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 1000px; /* 최대 너비 */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 3rem; /* 제목 크기 */
+            margin-bottom: 20px; /* 제목 아래 여백 */
+            position: absolute;
+            top: 20px; /* 제목을 상단에 위치시킴 */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .red {
+            color: red; /* 빨간색으로 F 강조 */
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px; /* 위쪽 여백 추가 */
+        }
+
+        .teacher {
+            margin-right: 20px; /* 이미지와 비디오 사이 여백 */
+        }
+
+        .teacher img {
+            width: 200px;
+            margin-top: 95px;
+        }
+
+        .speech-bubble {
+            background-color: #d1d1e0; /* 말풍선 배경색 */
+            border-radius: 15px; /* 둥근 모서리 */
+            padding: 20px;
+            font-size: 2.1rem;
+            max-width: 500px;
+        }
+
+        .bubble-text {
+            margin-bottom: 13px;
+            margin-top: 5px; /* 위쪽 여백 조정 */
+        }
+
+        .video-box iframe {
+            border-radius: 10px; /* 비디오 박스 둥근 모서리 */
+            width: 100%; /* 비디오 너비를 100%로 */
+            max-width: 500px; /* 최대 너비 */
+            height: 300px; /* 높이를 자동으로 맞춤 */
+        }
+
+        .next-button {
+            background-color: #99e6ff;
+            color: white;
+            font-size: 1.5rem;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px; /* 버튼을 하단에 고정 */
+            right: 20px; /* 오른쪽에 고정 */
+        }
+
+        .next-button:hover {
+            background-color: #80d4ff;
+        }
+
+        .arrow {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title"><strong>F</strong> <span class="red">(Father)</span></h1>
+        
+        <div class="content">
+            <!-- 선생님 이미지 -->
+            <div class="teacher">
+                <img src="teacher.png" alt="선생님 이미지">
+            </div>
+            
+            <!-- 말풍선 및 비디오 -->
+            <div class="speech-bubble">
+                <p class="bubble-text">Shall we watch this video first?</p>
+                <div class="video-box">
+                    <iframe src="./ilovemyfather.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="next-button" onclick="goToNextPage()">NEXT <span class="arrow">➔</span></button>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "index.fathersecond.html";  // 다음 페이지 링크
+        }
+    </script>
+</body>
+</html>
